@@ -1,0 +1,63 @@
+<main class="main main-container">
+  <h1 class="visually-hidden">Сделать заказ</h1>
+  @@include("../header-main/header-main.html")
+  <div class="order__container order">
+    <form action="/test" class="order__from form">
+      <div class="form__item">
+        <label for="name-company" class="form__label">
+          Фирма
+        </label>
+        <input id="name-company" type="text" class="form__input" />
+      </div>
+      <div class="form__item">
+        <label for="name-city" class="form__label">
+          Город
+        </label>
+        <input id="name-city" type="text" class="form__input" />
+      </div>
+      <div class="form__item">
+        <label for="name-face" class="form__label">
+          Контактное лицо <i class="fas fa-star-of-life form__icon"></i>
+        </label>
+        <input id="name-face" type="text" class="form__input" required />
+      </div>
+      <div class="form__item">
+        <label for="name-email" class="form__label">
+          Электронная почта <i class="fas fa-star-of-life form__icon"></i>
+        </label>
+        <input id="name-email" type="email" class="form__input" required />
+      </div>
+      <div class="form__item">
+        <label for="name-phone" class="form__label">
+          Телефон <i class="fas fa-star-of-life form__icon"></i>
+        </label>
+        <input id="name-phone" type="tel" class="form__input" required />
+      </div>
+      <div class="form__item">
+        <label for="name-material" class="form__label">
+          Материал изделия <i class="fas fa-star-of-life form__icon"></i>
+        </label>
+        <input id="name-material" type="text" class="form__input" required />
+      </div>
+      <div class="form__item">
+        <label for="name-coating" class="form__label">
+          Необходимое покрытие <i class="fas fa-star-of-life form__icon"></i>
+        </label>
+        <input id="name-coating" type="text" class="form__input" required />
+      </div>
+      <div class="form__item">
+        <label for="name-quantity" class="form__label">
+          Количество изделий <i class="fas fa-star-of-life form__icon"></i>
+        </label>
+        <input id="name-quantity" type="text" class="form__input" required />
+      </div>
+      <div class="form__item form__buttons">
+        <button class="form__buttons-item" type="reset">Очистить</button>
+        <button class="form__buttons-item" type="submit" disabled>
+          Отправить
+        </button>
+      </div>
+    </form>
+    <div class="order__img"></div>
+  </div>
+</main>

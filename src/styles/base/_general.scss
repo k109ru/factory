@@ -1,0 +1,77 @@
+body {
+    font-family: "Open Sans", serif;
+    font-weight: 300;
+    color: rgb(23, 25, 26);
+    box-sizing: border-box; 
+    background-color:  rgb(78, 141, 156);
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 400;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-h) { // width < 1200?
+      font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-v) { // width < 900?
+      font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  
+  @include respond(desktop) {
+      font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: darken($primary, 20%);
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.all-document {
+    margin: 0 auto;
+    max-width: 1080px;
+
+    @include respond(tab-h) {
+        margin: 40px auto 0 auto;
+        max-width: 1080px;
+        box-shadow: 0 0 20px 10px rgb(66, 118, 131);
+    }
+}

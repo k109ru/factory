@@ -1,0 +1,310 @@
+.main-container {
+
+    @include respond(tab-v) {
+        min-height: 56rem;
+    }
+
+    @include respond(tab-h) {
+        min-height: 54rem;
+    }
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 1080px;
+    min-height: 48rem;
+    margin: 0 auto;
+    color: rgb(77, 76, 76);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.main {
+    font-size: 1.7rem;
+
+    &__contact {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+
+        &-item {
+            padding: 5px;
+            color: $gray-900;
+            font-size: 1.5rem;
+        }
+    }
+ 
+    &__title {
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin-top: 26rem;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+
+
+.main__background {
+    position: absolute;
+    width: 100%;
+}
+
+.main__content {
+
+    @include respond(tab-v) {
+        margin-top: 55rem;
+    }
+
+    @include respond(tab-h) {
+        margin-top: 50rem;
+    }
+    margin-top: 37rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.main__list-advantages {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.advantages {
+
+    @include respond(tab-v) {
+        margin: 50px 80px;
+    }
+    position: relative;
+    margin: 50px 20px;
+}
+
+
+.advantage {
+    
+    &__item {
+
+        @include respond(tab-v) {
+            font-size: 1.8rem;
+        }
+        z-index: 0;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    &__item-decorator {
+        display: none;
+        z-index: 10;
+        width: 120px;
+        height: 50px;
+        background-color: rgb(255, 255, 255);
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    &__item-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        width: 120px;
+        height: 160px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    &__item-info {
+        position: absolute;
+        z-index: -1;
+        top: 200px;
+        max-width: 940px;
+        margin: 0 auto;
+
+        &__item:hover {
+            transition: 1.6s;
+        }
+
+        &--1, &--2, &--3, &--4 {
+            display: none;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
+
+        &--1 {
+            display: none;
+        }
+    }
+}
+
+.main__info {
+
+    @include respond(tab-v) {
+        font-size: 2rem;
+    }
+    margin: 1rem;
+
+    &-header {
+
+        @include respond(tab-v) {
+            margin: 2rem 0;
+        }
+        margin: 1rem 0;
+    }
+
+    &-text {
+        line-height: 28px;
+    }
+
+    &-couple {
+        @include respond(tab-h) {
+            margin-top: 20px;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--left {
+            margin-top: 0;
+            margin-right: 10px;
+            max-width: 400px;
+        }
+        
+        &--right > li {
+            margin-left: 30px;
+            list-style-type: disc;
+            line-height: 28px;
+            text-align: start;
+        }
+    }
+}
+
+
+
+
+.hexagon {
+    position: relative;
+    width: 100px;
+    height: 55px;
+    margin: 20px 0;
+    background: rgb(42, 182, 170);
+    
+    &__icon {
+
+        @include respond(tab-v) {
+            top: 1rem;
+            width: 5rem;
+            font-size: 2.2rem;
+        }
+        display: block;
+        position: absolute;
+        top: 0.9rem;
+        left: 50%;
+        width: 4rem;
+        border: 1px solid rgb(0, 0, 0);
+        padding: 10px;
+        transform: translate(-50%, 0);
+        border-radius: 50%;
+        font-size: 1.8rem;
+        text-align: center;
+        background-color: rgb(245, 245, 245);
+    }
+}
+
+.hexagon:before, .hexagon:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.hexagon:before {
+    top: -25px;
+    border-bottom: 25px solid rgb(42, 182, 170);
+}
+
+.hexagon:after {
+    bottom: -25px;
+    border-top: 25px solid rgb(42, 182, 170);
+}
+
+.main__location {
+
+    @include respond(tab-h) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main__geo {
+    order: 1;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.main__geo-map {
+    min-width: 500px;
+    min-height: 500px;
+}
+
+.main__info-contact {
+    max-width: 500px;
+    min-height: 500px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.info {
+
+    &__item {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: start;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+
+        &-label {
+            align-self: center;
+            width: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        &-text {
+            padding: 5px;
+            text-align: start;
+        }
+    }
+}
+
+.info-contact__title {
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+.main__yandex-counter {
+    position: relative;
+}
+
+.main__yandex-img {
+    display: block;
+    position: absolute;
+    top: -71px;
+    right: 40px;
+}

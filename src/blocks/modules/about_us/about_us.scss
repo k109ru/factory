@@ -1,0 +1,28 @@
+.main__content-about {
+
+    @include respond(tab-v) {
+        margin-top: 55rem;
+        padding-bottom: 0;
+    }
+
+    @include respond(tab-h) {
+        margin-top: 50rem;
+    }
+    padding-bottom: 15rem;
+    position: relative;
+    margin-top: 37rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.about {
+    padding: 2rem;
+    margin-top: -30rem;
+    margin-bottom: 11rem;
+    font-size: 2rem;
+    color: rgb(15, 15, 15);
+
+    &__text {
+        margin-top: 1rem;
+    }
+}

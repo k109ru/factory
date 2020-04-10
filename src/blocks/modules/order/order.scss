@@ -1,0 +1,101 @@
+.order {
+    position: relative;
+
+    &__container {
+
+        @include respond(tab-v) {
+            margin-bottom: 5rem;
+        }
+        margin-top: 5rem;
+        margin-bottom: 0;
+        padding: 0;
+        box-shadow: 7px 3px 61px 0 rgba(0, 0, 0, 0.75);
+    }
+
+    &__img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(to right, rgba(123, 199, 218, 0.1) 0%, rgba(123, 199, 218, 0.1) 20%, rgba(255, 255, 255, 0.63) 35%, rgba(255, 255, 255, 0.9) 95%,),
+            url("../img/img5.jpg");
+    }
+}
+
+.form {
+
+    @include respond(tab-v) {
+        margin-left: 40rem;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+    max-width: 50rem;
+    height: 100%;
+    padding: 5px;
+    margin-left: 0;
+
+    &__label {
+        display: block;
+        color: rgb(0, 0, 0);
+    }
+
+    &__icon {
+        vertical-align: middle;
+        font-size: 1rem;
+        color: rgba(184, 82, 82, 0.5);
+    }
+
+    &__input {
+        display: block;
+        width: 22rem;
+        min-height: 4rem;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        transition: all .3s;
+        line-height: 3rem;
+        margin-top: 1rem;
+        border-radius: 3px;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border-bottom: 3px solid rgb(109, 226, 80);
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid rgb(226, 80, 80);
+        }
+    }
+
+    &__buttons {
+
+        @include respond(tab-v) {
+            margin-top: 0;
+        }
+        margin-top: 1rem;
+
+        &-item {
+            margin: 0 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 5px;
+            color: rgb(247, 243, 243);
+            border-radius: 3px;
+            background-color: rgb(124, 175, 171);
+            
+            &:hover {
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            }
+
+            &:disabled {
+                color: rgba(128, 125, 125, 0.3);
+                background-color: rgba(86, 119, 116, 0.3);
+            }
+        }
+    }
+}

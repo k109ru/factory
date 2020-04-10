@@ -1,0 +1,33 @@
+.main__content-contacts {
+
+    @include respond(tab-v) {
+        margin-top: 55rem;
+    }
+
+    @include respond(tab-h) {
+        margin-top: 50rem;
+    }
+    position: relative;
+    margin-top: 37rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.contacts {
+
+    @include respond(tab-v) {
+        margin-top: -48rem;
+    }
+
+    @include respond(tab-h) {
+        margin-top: -45rem;
+    }
+    margin-top: -34rem;
+}
+
+.main__contacts-contact {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: rgba(253, 253, 250, 0.8);
+}

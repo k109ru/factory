@@ -1,0 +1,64 @@
+.main__content-ep {
+
+    @include respond(tab-v) {
+        margin-top: 58rem;
+    }
+
+    @include respond(tab-h) {
+        margin-top: 50rem;
+    }
+    margin-top: 42rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.ep {
+    margin-top: 21rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+
+    &__blocks-kind {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__block-kind {
+        max-width: 55rem;
+        min-height: 23rem;
+        margin: 2rem;
+        padding: 5px;
+        box-shadow: 0 0 10px 2px rgba(157, 215, 230, 0.8);
+    }
+
+    &__block-title {
+        margin: 1rem;
+    }
+
+    &__list {
+        text-align: start;
+        list-style: square outside;
+    }
+
+    &__item {
+        line-height: 2.2rem;
+    }
+
+    &__client {
+        margin-top: 2rem 0;
+        padding: 2rem;
+    }
+
+    &__client-text {
+        margin-top: 1rem;
+    }
+
+    &__attention {
+        margin-top: 2rem 0;
+        padding: 2rem;
+    }
+
+    &__attention-text {
+        margin-top: 1rem;
+    }
+}
